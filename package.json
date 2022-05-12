@@ -1,0 +1,42 @@
+{
+  "name": "gulp-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserslist": [
+    "last 2 version",
+    "> 2%",
+    "not dead"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-avif": "^1.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "^4.0.1",
+    "gulp.spritesmith": "^6.12.1",
+    "node-sass": "^6.0.1",
+    "yargs": "^17.2.1"
+  }
+}

@@ -1,0 +1,124 @@
+// png sprite
+@mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x $sprite-offset-y;
+    background-repeat: no-repeat;
+}
+
+@mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+}
+
+@mixin flex-container($direction: row, $align-items: normal, $justify:normal, $align-content: normal, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify;
+    align-content: $align-content;
+    flex-wrap: $wrap;
+}
+
+// media
+@mixin media-1920 {
+    @media screen and (min-width: 1921px) {
+        @content;
+    }
+}
+
+@mixin media-elgx {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin media-elg-m {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-elg {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin media-lt {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-lg-m {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin media-md-m {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media-sm-m {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin media($media-query) {
+    @media screen and ($media-query) {
+        @content;
+    }
+}
+
+/* retina */
+@mixin media-retina {
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 144dpi) {
+        @content;
+    }
+}
+
+@mixin onFocus {
+    &:focus {
+        box-shadow: 0px 0px 4px 0px rgba(#0e77ff, 0.75);
+    }
+}

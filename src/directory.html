@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Directory Page</title>
+    <!-- Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@600;700;800&family=Manrope:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- SimpleBar -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/simplebar@5.3.6/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@5.3.6/dist/simplebar.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet"
+        href="css/libs/listbox.min.css">
+    <link rel="stylesheet"
+        href="css/Directory.css">
+
+    <noscript>
+        <style>
+            [data-simplebar] {
+                overflow: auto;
+            }
+        </style>
+    </noscript>
+    <script src="js/checkImageFormatSupport.js"></script>
+</head>
+
+<body>
+
+    <div class="bgc-directory-page">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+            style="display: none;">
+            <defs>
+                <symbol id="arrow-blue">
+                    <g transform="translate(-952.951 -1042.28)">
+                        <path d="M5.806,11.612,0,5.806,5.806,0"
+                            transform="translate(969.049 1055.306) rotate(180)"
+                            fill="none"
+                            stroke="#0e77ff"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2" />
+                        <line x1="14"
+                            transform="translate(953.951 1049.5)"
+                            fill="none"
+                            stroke="#0e77ff"
+                            stroke-linecap="round"
+                            stroke-width="2" />
+                    </g>
+                </symbol>
+                <symbol id="arrow-white">
+                    <g transform="translate(-952.951 -1042.28)">
+                        <path d="M5.806,11.612,0,5.806,5.806,0"
+                            transform="translate(969.049 1055.306) rotate(180)"
+                            fill="none"
+                            stroke="#fff"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2" />
+                        <line x1="14"
+                            transform="translate(953.951 1049.5)"
+                            fill="none"
+                            stroke="#fff"
+                            stroke-linecap="round"
+                            stroke-width="2" />
+                    </g>
+                </symbol>
+                <symbol id="arrow-green">
+                    <g transform="translate(-952.951 -1042.28)">
+                        <path d="M5.806,11.612,0,5.806,5.806,0"
+                            transform="translate(969.049 1055.306) rotate(180)"
+                            fill="none"
+                            stroke="#32d483"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2" />
+                        <line x1="14"
+                            transform="translate(953.951 1049.5)"
+                            fill="none"
+                            stroke="#32d483"
+                            stroke-linecap="round"
+                            stroke-width="2" />
+                    </g>
+                </symbol>
+                <symbol id="court-records">
+                    <path
+                        d="M0,22H24v2H0ZM24,7.909V10H21v8h2v2H1V18H3V10H0V7.909A3,3,0,0,1,1.563,5.275l9-4.909a2.993,2.993,0,0,1,2.874,0l9,4.909A3,3,0,0,1,24,7.909ZM5,18H8V10H5Zm5-8v8h4V10Zm9,0H16v8h3Zm3-2.091a1,1,0,0,0-.521-.878l-9-4.909a1,1,0,0,0-.958,0l-9,4.909A1,1,0,0,0,2,7.909V8H22Z"
+                        transform="translate(0 0.002)"
+                        fill="#ff2c80"></path>
+                </symbol>
+                <symbol id="current-address">
+                    <path
+                        d="M50.775,24.2l-.7-.6c-.961-.8-9.352-8.052-9.352-13.353a10.05,10.05,0,0,1,20.1,0c0,5.3-8.391,12.548-9.348,13.357Zm0-21.827A7.885,7.885,0,0,0,42.9,10.247c0,3.33,5.163,8.65,7.876,11.085,2.714-2.436,7.876-7.759,7.876-11.085A7.885,7.885,0,0,0,50.775,2.371Z"
+                        transform="translate(-40.725 -0.198)"
+                        fill="#fb9811"></path>
+                    <path
+                        d="M174.11,137.566a3.984,3.984,0,1,1,3.984-3.984A3.984,3.984,0,0,1,174.11,137.566Zm0-5.975a1.992,1.992,0,1,0,1.992,1.992A1.992,1.992,0,0,0,174.11,131.591Z"
+                        transform="translate(-164.06 -123.533)"
+                        fill="#fb9811"></path>
+                </symbol>
+            </defs>
+        </svg>
+
+        @@include('./shared/html/_header.html')
+
+        <main>
+            <section class="title-page  bgc-container">
+                <h1>Aaliyah Armstrong</h1>
+                <div class='title-page__content'>
+
+
+                    <div class="bgc-breadcrumb">
+                        <div>
+                            <nav aria-label="Breadcrumb">
+                                <ul class="bgc-breadcrumb__list">
+                                    <li class="bgc-breadcrumb__item">
+                                        <a class="bgc-breadcrumb__link"
+                                            href="#"><span>People Search</span></a>
+                                    </li>
+                                    <li class="bgc-breadcrumb__item">
+                                        <a class="bgc-breadcrumb__link"
+                                            href="#"><span>A</span></a>
+                                    </li>
+                                    <li class="bgc-breadcrumb__item">
+                                        <a class="bgc-breadcrumb__link"
+                                            href="#"><span>Armstrong</span></a>
+                                    </li>
+                                    <li class="bgc-breadcrumb__item">
+                                        <a class="bgc-breadcrumb__link"
+                                            href="#"
+                                            aria-current="page"><span>Aaliyah Armstrong</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                    <div class="title-page__filter">
+                        <div>Filter by State</div>
+                        <select id="mainscreen-state-select">
+                            <option value="State 1">State 1</option>
+                            <option value="State 2">State 2</option>
+                            <option value="State 3">State 3</option>
+                            <option value="State 4">State 4</option>
+                            <option value="State 5">State 5</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <div class="wrapper">
+                <section class='wrapper__description'>
+                    <div class='bgc-container'>
+                        <h2>This is what we know about Aaliah Armstrong living in the United States: </h2>
+                        <p>
+                            There are about 6 individuals named Aaliya Armstrong or using alias of Aaliya Armstrong.
+                            There
+                            are roughly 12 home addresses, 19 social media accounts, 13 court records, 2 phone numbers,
+                            10
+                            aliases, 5 emails, 7 police records and other public records found under the name of Aaliya
+                            Armstrong. The report for this name, or its alias has records coming from New York,
+                            California,
+                            Oregon, Washington and Texas. It is highly likely that there are other records available
+                            from
+                            different states for this person. Our system has more information available which, we can
+                            not
+                            show on this page, due to nature of the documents. To get more deep web information about
+                            Aaliya
+                            Armstrong try obtaining a confidential background check account by following this
+                        </p>
+                        <a href="#">link here.</a>
+                        <hr>
+                    </div>
+                </section>
+
+                @@include('./shared/html/_orders.html')
+
+                @@include('./shared/html/_reports.html')
+
+                <div class="wrapper">
+                    @@include('./shared/html/_states-map.html')
+                </div>
+
+                <div class="wrapper">
+                    @@include('./shared/html/_frequently-asked-questions.html')
+                </div>
+                <div class="wrapper white">
+                    @@include('./shared/html/_people-directory.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('./shared/html/_footer.html')
+
+    </div>
+
+    <!-- Script Libs -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/libs/listbox.js"></script>
+    <!-- Scripts -->
+    <script defer
+        src="js/main.js"></script>
+    <script defer
+        src="js/faq.js"></script>
+    <script defer
+        src="js/directory.js"></script>
+
+</body>
+
+</html>

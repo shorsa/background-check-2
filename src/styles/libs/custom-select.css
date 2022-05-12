@@ -1,0 +1,103 @@
+.select-custom {
+	position: relative;
+	width: auto;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 18px;
+	padding-right: 30px;
+	background-color: #fff;
+	border-radius: 5px;
+	border: solid 1px #e0e7ee;
+	text-align: left;
+	transition: all 0.2s ease-in-out;
+	user-select: none;
+	white-space: nowrap;
+	outline: none;
+	cursor: pointer;
+	z-index: 10;
+}
+.select-custom:active,
+.select-custom.open,
+.select-custom:focus {
+	border-color: #88bfff;
+}
+.select-custom:after {
+	content: "";
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	display: block;
+	width: 5px;
+	height: 5px;
+	margin-top: -4px;
+	border-bottom: 2px solid #90a1b5;
+	border-right: 2px solid #90a1b5;
+	pointer-events: none;
+	transform-origin: 66% 66%;
+	transform: rotate(45deg);
+	transition: all 0.15s ease-in-out;
+}
+.select-custom.open .select-custom-options {
+	opacity: 1;
+	transform: scale(1) translateY(0);
+	pointer-events: auto;
+}
+.select-custom-trigger {
+	position: relative;
+}
+.select-custom-trigger-icon {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 67px;
+	height: 67px;
+	background-color: #ffe9ed;
+	border-radius: 10px;
+	transform: translateY(-50%);
+}
+.select-custom-options {
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	right: -1px;
+	padding: 0;
+	opacity: 0;
+	background-color: #fff;
+	border-radius: 5px;
+	transform: scale(0.75) translateY(-21px);
+	transform-origin: 50% 0;
+	transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+	border: 1px solid rgba(68, 88, 112, 0.11);
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 9;
+}
+.select-custom-option {
+	position: relative;
+	min-height: 40px;
+	padding-left: 28px;
+	padding-right: 29px;
+	font-weight: 400;
+	line-height: 40px;
+	list-style: none;
+	outline: none;
+	cursor: pointer;
+	text-align: left;
+	transition: all 0.2s;
+}
+.select-custom .select-custom-option:hover,
+.select-custom .select-custom-option.focused {
+	background-color: #f6f7f9;
+}
+.select-custom .select-custom-option.selected {
+	display: none;
+}
+.select-custom .select-custom-option.disabled {
+	background-color: transparent;
+	color: #90a1b5;
+	cursor: default;
+}

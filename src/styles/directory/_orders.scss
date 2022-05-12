@@ -1,0 +1,95 @@
+$card-radius: 5px;
+
+.orders-container {
+    padding-top: 6px;
+    padding-bottom: 20px;
+
+    &>h2 {
+        margin-bottom: 10px;
+    }
+
+    &__cards {
+        @include flex-container(row, flex-start, space-between, flex-start, wrap);
+
+        .card {
+            background-color: #fff;
+            border-radius: $card-radius;
+            margin: 15px 0;
+            border-top: 5px solid $color-blue;
+            width: calc(100% / 3 - 2%);
+            padding-top: 16px;
+            box-shadow: 1px 1px 20px 0px #585e674a;
+            min-width: 335px;
+
+            @include media-lt {
+                width: calc(100% / 2 - 2%);
+            }
+
+            @include media-md {
+                width: 100%;
+            }
+
+            &__title {
+                letter-spacing: -0.3px;
+                margin: 0 25px;
+                @include flex-container(row, center);
+                padding-bottom: 12px;
+
+                border-bottom: 1px solid $color-border;
+
+                .point {
+                    min-width: 60px;
+                    min-height: 60px;
+                    background-color: $color-green;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    @include flex-container(row, center, center);
+                }
+            }
+
+            &_content {
+                position: relative;
+                padding: 29px 25px;
+
+                h4 {
+                    color: $color-blue;
+                    font-weight: bold;
+                    letter-spacing: -0.4px;
+                }
+
+                p {
+                    margin-top: 17px;
+                    letter-spacing: -0.35px;
+                    line-height: 27.5px;
+                }
+
+                .splash {
+                    border-bottom-right-radius: $card-radius;
+                    border-bottom-left-radius: $card-radius;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    top: 0;
+                    background-color: #0e76ffab;
+                    @include flex-container(row, center, center);
+                    transform: scaleY(0);
+                    transition: opacity 0.2s, transform 1s;
+                    opacity: 0;
+
+                    .bgc-start-now__btn {
+                        width: 60%;
+                    }
+                }
+
+                &:hover {
+                    .splash {
+                        transition: opacity 0.2s, transform 0.1s;
+                        opacity: 1;
+                        transform: scaleY(1);
+                    }
+                }
+            }
+        }
+    }
+}

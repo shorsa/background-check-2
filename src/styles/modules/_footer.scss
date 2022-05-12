@@ -1,0 +1,143 @@
+.bgc-footer {
+	.bgc-container {
+		@include media-lg {
+			padding: 0;
+		}
+	}
+	.bgc-footer__nav {
+		background-color: #00264d;
+		overflow: hidden;
+	}
+	.bgc-footer__grid {
+		display: grid;
+		grid-template-columns: 1fr 244px 238px 224px;
+		padding-bottom: 44px;
+
+		@include media("max-width: 1100px") {
+			grid-template-columns: 1fr 234px 220px 224px;
+		}
+		@include media-lg {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding-bottom: 27px;
+		}
+	}
+	.bgc-footer__logo {
+		grid-row: 1 / 9;
+
+		@include media-lg {
+			order: 0;
+		}
+		.bgc-logo {
+			padding-top: 14px;
+
+			@include media-lg {
+				padding: 15px 20px 17px;
+			}
+
+			.bgc-logo__text {
+				strong {
+					color: #fff;
+				}
+				& > span {
+					color: #8897a7;
+				}
+			}
+		}
+	}
+
+	.bgc-footer__head {
+		color: #fff;
+		padding: 30px 0;
+		margin-bottom: 54px;
+		font-weight: 400;
+		@include media-lg {
+			width: 100%;
+			padding: 14px 20px 15px;
+			border-top: 1px solid #144474;
+			margin-bottom: 24px;
+			background-color: #043363;
+		}
+		@include media-lg {
+			&:nth-child(2) {
+				order: 1;
+			}
+			&:nth-child(3) {
+				order: 3;
+			}
+			&:nth-child(4) {
+				order: 5;
+			}
+		}
+	}
+	.bgc-footer__logo + .bgc-footer__head {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 100vw;
+			height: 1px;
+			background-color: #144474;
+
+			@include media-lg {
+				display: none;
+			}
+		}
+		&::before {
+			left: calc(-100vw + 50%);
+		}
+		&::after {
+			right: calc(-100vw + 50%);
+		}
+	}
+	.bgc-footer__group {
+		@include media-lg {
+			padding: 0 20px;
+		}
+		@include media-lg-m {
+			&:not(:last-child) {
+				padding-right: 15px;
+			}
+		}
+		a {
+			display: block;
+			margin-bottom: 23px;
+			font-size: 15px;
+			line-height: 1.4;
+			color: #8396ab;
+			transition: color 0.1s linear;
+			font-weight: 400;
+			&:hover {
+				color: $color-green;
+			}
+
+			@include media-md {
+				line-height: 1.35;
+			}
+		}
+		@include media-lg {
+			&:nth-child(5) {
+				order: 2;
+			}
+			&:nth-child(6) {
+				order: 4;
+			}
+			&:nth-child(7) {
+				order: 6;
+			}
+		}
+	}
+	.bgc-footer__cc {
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.334;
+		padding: 20px;
+		color: #8396ab;
+		text-align: center;
+		background-color: #001f40;
+	}
+}

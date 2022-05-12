@@ -1,0 +1,142 @@
+@import "_index.scss";
+@import "./directory/orders";
+@import "./directory/reports";
+@import "./directory/states-map";
+@import "./directory/people-directory.scss";
+@import "./directory/frequently-asked-questions";
+@import "./modules/bgc-breadcrumb";
+
+.title-page {
+
+    padding-bottom: 13px;
+
+    &>h1 {
+        color: $color-blue;
+        font-family: "Barlow", sans-serif;
+        font-weight: 900;
+        font-size: 40px;
+        margin-top: 13px;
+
+        @include media-md {
+            font-size: 26px;
+        }
+    }
+
+    .title-page__content {
+        @include flex-container(row, flex-end, space-between);
+
+        @include media-md {
+            display: block;
+
+            .bgc-breadcrumb {
+                display: none;
+            }
+
+            margin-top: 19px;
+        }
+
+        .title-page__filter {
+            max-width: 296px;
+            height: fit-content;
+            @include flex-container(row, center, space-between);
+            font-size: 15px;
+
+            @include media-md {
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: none;
+
+            }
+
+            .mainscreen-form__select {
+                @include media-md {
+                    margin-top: 7px;
+                }
+
+                margin-left: 15px;
+                width: 180px;
+                margin-bottom: 0;
+
+                @include media-md {
+                    margin-left: 0;
+                    max-width: none;
+                    width: 100%;
+                }
+
+                &::after {
+                    border: none;
+                    width: 13px;
+                    height: 7px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC40NCIgaGVpZ2h0PSI4LjIyIiB2aWV3Qm94PSIwIDAgMTQuNDQgOC4yMiI+PHBhdGggZD0iTTUuODA2LDExLjYxMiwwLDUuODA2LDUuODA2LDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuNDE0IDcuMjIpIHJvdGF0ZSgtOTApIiBmaWxsPSJub25lIiBzdHJva2U9IiMwNTM2NjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+");
+                    transform: translateY(-50%) rotate(0deg);
+                    transition: transform 0.1s linear;
+                }
+
+                &.open::after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+
+                .combo-input {
+                    min-height: 50px;
+                    padding: 14px 15px;
+                    border-radius: 3px;
+                    border-width: 1px;
+
+                    &:focus {
+                        color: $color-blue-dark;
+                        border-color: transparent;
+                        background-color: #e2fff1;
+                        box-shadow: 0px 0px 0px 2px $color-green;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+.wrapper {
+    background: $color-section-bg;
+    border-top: 1px solid $color-border;
+
+    &.white {
+       background: #ffffff;
+
+    }
+
+    &__description {
+        padding-top: 24px;
+
+        p,
+        a {
+            font-size: 0.95rem;
+            line-height: 1.74rem;
+            letter-spacing: 0.06px;
+        }
+
+        a {
+            color: $color-blue;
+            text-decoration: underline;
+        }
+
+        hr {
+            margin-top: 20px;
+        }
+    }
+
+
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.63rem;
+    font-weight: 900;
+    letter-spacing: -0.05px;
+    margin-top: 20px;
+}

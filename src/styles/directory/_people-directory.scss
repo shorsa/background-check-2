@@ -1,0 +1,52 @@
+.people-directory-container {
+    padding-bottom: 50px;
+
+    &>h2,
+    p {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 900;
+        font-family: "Barlow", sans-serif;
+        margin: 44px 0 10px;
+
+        @include media-md {
+            font-size: 26px;
+        }
+    }
+
+    &>p {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .letters {
+        margin-top: 29px;
+        @include flex-container(row, center, center, normal, wrap);
+
+        &>.letter {
+            cursor: pointer;
+            text-transform: uppercase;
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+            background-color: #F8FAFD;
+            border: 1px solid $color-gray;
+            margin: 2px;
+            font-size: 14px;
+            color: $color-blue;
+            font-weight: 800;
+            @include flex-container(row, center, center);
+            transition-duration: 0.2s;
+
+            &:hover {
+                transition-duration: 0.2s;
+                transform: scale(1.1);
+                background-color: $color-blue;
+                color: #ffffff;
+            }
+        }
+    }
+}
